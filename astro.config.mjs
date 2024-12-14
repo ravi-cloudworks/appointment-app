@@ -7,9 +7,7 @@ export default defineConfig({
   base: '/appointment-app',
   integrations: [
     react(),
-    tailwind({
-      // Enable if you want to write Tailwind classes in .astro files
-      applyBaseStyles: true
-    })
+    tailwind()
   ],
+  output: 'static',
 });

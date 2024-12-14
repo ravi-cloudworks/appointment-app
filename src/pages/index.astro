@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Appointment Booking">
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+        Book an Appointment
+      </h1>
+      <p class="mt-5 max-w-xl mx-auto text-xl text-gray-500">
+        Simple and easy way to schedule meetings with your consultant.
+      </p>
+    </div>
+    <div class="mt-16 bg-white rounded-lg shadow p-8">
+      <p class="text-center text-gray-600">
+        Welcome to our appointment booking system. Integration coming soon!
+      </p>
+    </div>
+  </div>
 </Layout>

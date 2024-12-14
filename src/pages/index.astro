@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GoogleAuthButton from '../components/auth/GoogleAuthButton';
 ---
 
 <Layout title="Appointment Booking">
@@ -11,12 +12,15 @@ import Layout from '../layouts/Layout.astro';
       <p class="mt-5 max-w-xl mx-auto text-xl text-gray-500">
         Simple and easy way to schedule meetings with your consultant.
       </p>
+      <div class="mt-8 flex justify-center">
+        <GoogleAuthButton client:load />
+      </div>
       <div class="mt-8">
         <a 
           href="/appointment-app/test-consultant/book" 
-          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
+          class="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800"
         >
-          Book with Test Consultant1
+          Book with Test Consultant
         </a>
       </div>
     </div>

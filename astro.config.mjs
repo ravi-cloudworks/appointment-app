@@ -7,4 +7,7 @@ export default defineConfig({
   base: '/appointment-app',
   integrations: [react(), tailwind()],
   output: 'static',
+  devToolbar: {
+    enabled: false
+  }
 });

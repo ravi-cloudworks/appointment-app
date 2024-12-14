@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BookingCalendar from '../../components/booking/BookingCalendar';
+
+// This is required for dynamic routes in Astro
+export function getStaticPaths() {
+    return [
+        // This is just a placeholder - we'll make it dynamic later
+        { params: { consultant: 'test-consultant' } }
+    ];
+}
+
+const { consultant } = Astro.params;
+---
+
+<Layout title={`Book Appointment with ${consultant}`}>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-bold text-gray-900">
+                Book an Appointment with {consultant}
+            </h1>
+            <p class="mt-2 text-gray-600">
+                Select a date and time for your 30-minute consultation
+            </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+            <BookingCalendar client:load consultant={consultant} />
+        </div>
+    </div>
+</Layout>
